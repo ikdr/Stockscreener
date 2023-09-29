@@ -1,4 +1,7 @@
 dash == 2.13.0
 pandas
 numpy
+yfinance
+beautifulsoup4 requests
+requests-cache
 gunicorn
