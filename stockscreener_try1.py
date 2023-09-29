@@ -13,8 +13,6 @@ Original file is located at
 #!pip install dash
 
 #General Imports
-from google.colab import data_table
-data_table.enable_dataframe_formatter()
 
 import yfinance as yf
 import pandas as pd
