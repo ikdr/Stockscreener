@@ -2,6 +2,6 @@ dash == 2.13.0
 pandas
 numpy
 yfinance
-beautifulsoup4 requests
+beautifulsoup4
 requests-cache
 gunicorn
