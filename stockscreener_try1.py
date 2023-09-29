@@ -7,10 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1V8tOtPdPZp6ljXP2rNP-n-tdg5zie9Qn
 """
 
-!pip install yfinance
-!pip install beautifulsoup4 requests
-!pip install requests-cache #for caching Yahoo finance data
-!pip install dash
+#!pip install yfinance
+#!pip install beautifulsoup4 requests
+#!pip install requests-cache #for caching Yahoo finance data
+#!pip install dash
 
 #General Imports
 from google.colab import data_table
