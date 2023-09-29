@@ -237,17 +237,13 @@ market_cap_map_min = {0: '0M', 1: '300M', 2: '2B', 3: '10B', 4: '50B'}
 market_cap_map_max = {0: '300M', 1: '2B', 2: '10B', 3: '50B', 4:'inf'}
 """
 
-#selected_sector = 'Financial Services'
-##selected_sector = 'Technology'
-##filtered_stocks_df = filter_stocks(selected_sector, '2B', '10B')
-#len(filtered_stocks_df)
-
 print('Starting dash app')
 #Dash app
 import dash
 from dash import dcc, html, Input, Output, callback
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['https://github.com/STATWORX/blog/blob/master/DashApp/assets/style.css']
 
 # Create a Dash app
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
