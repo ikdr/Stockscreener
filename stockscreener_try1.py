@@ -242,6 +242,7 @@ market_cap_map_max = {0: '300M', 1: '2B', 2: '10B', 3: '50B', 4:'inf'}
 ##filtered_stocks_df = filter_stocks(selected_sector, '2B', '10B')
 #len(filtered_stocks_df)
 
+print('Starting dash app')
 #Dash app
 import dash
 from dash import dcc, html, Input, Output, callback
