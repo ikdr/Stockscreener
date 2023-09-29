@@ -219,7 +219,8 @@ def filter_stocks(sector, market_cap_min, market_cap_max):
 
     return filtered_stocks_df
 
-"""1. Consumer Cyclical
+"""
+1. Consumer Cyclical
 2. Industrials
 3. Utilities
 4. Technology
@@ -239,40 +240,9 @@ market_cap_map_max = {0: '300M', 1: '2B', 2: '10B', 3: '50B', 4:'inf'}
 #selected_sector = 'Financial Services'
 ##selected_sector = 'Technology'
 ##filtered_stocks_df = filter_stocks(selected_sector, '2B', '10B')
+#len(filtered_stocks_df)
 
-len(filtered_stocks_df)
-
-# Create a TreeMap using Plotly with the dark theme
-if filtered_stocks_df.empty:
-    fig = px.scatter(title='No matching stocks found')
-else:
-    fig = px.treemap(
-        filtered_stocks_df,
-        path=['symbol'],
-        values='marketCap',
-        title='Stock Market Capitalization',
-        template="plotly_dark"  # Set the dark theme
-    )
-
-    # Customize the appearance of the TreeMap
-    fig.update_traces(
-        text= '<br>Market Cap: $' +  filtered_stocks_df['formattedMarketCap'] + '<br>P/E Ratio: ' + filtered_stocks_df['trailingPE'].astype(str),
-        textinfo="label+text",
-        hoverinfo="label+text",
-    )
-
-    fig.update_traces(
-        marker=dict(
-            colors=filtered_stocks_df['trailingPE'],
-            colorbar=dict(title='Trailing P/E'),
-            colorscale='ylorrd',  # Use the "Plasma_r" color scale
-            line=dict(width=2, color='black')
-        )
-    )
-
-# Show the TreeMap
-fig.show()
-
+#Dash app
 import dash
 from dash import dcc, html, Input, Output, callback
 
