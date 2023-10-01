@@ -131,8 +131,10 @@ market_cap_categories = {
 # Create a list of labels for the slider
 market_cap_labels = list(market_cap_categories.keys())
 # Create a list of dollar values corresponding to each market cap category
-market_cap_dollar_values = [' Micro-Cap ($0M - $300M)', 'Small-Cap ($300M - $2B)', 'Mid-Cap ($2B - $10B)',
+market_cap_dollar_values_2 = [' Micro-Cap ($0M - $300M)', 'Small-Cap ($300M - $2B)', 'Mid-Cap ($2B - $10B)',
                             'Large-Cap ($10B - $50B)', 'Mega-Cap ($50B+)']
+market_cap_dollar_values = ['($0M - $300M)', '($300M - $2B)', '($2B - $10B)',
+                            '($10B - $50B)', '($50B+)']
 
 # Create a list of marks for the slider based on the labels
 slider_marks = {i: label for i, label in enumerate(market_cap_dollar_values)}
