@@ -284,7 +284,8 @@ print(len(filtered_stocks_df))
 import dash
 from dash import dcc, html, Input, Output, callback
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['https://github.com/STATWORX/blog/blob/master/DashApp/assets/style.css']
 # Create a Dash app
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
