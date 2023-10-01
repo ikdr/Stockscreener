@@ -193,9 +193,7 @@ def fetch_stock_data(ticker_symbols):
         # Convert historical data to a pandas DataFrame
         # history_df = data.history(period="1d")
         info = data.info
-
         stock_data[symbol] = info
-
     end_time = time.time()  # Record the end time
     total_fetch_time = end_time - start_time  # Calculate the total fetch time
     print(f"Total fetch time for {len(ticker_symbols)} symbols: {total_fetch_time} seconds")
@@ -352,7 +350,7 @@ def update_treemap(selected_sector, min_slider_value, max_slider_value):
 
         fig = px.treemap(
             filtered_stocks_df,
-            path=['symbol'],
+            path=['sector',  'industry', 'symbol'],
             values='marketCap',
             title=f'Stock Market Capitalization - {selected_sector}',
             template="plotly_dark"  # Set the dark theme
